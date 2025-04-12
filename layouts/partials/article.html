@@ -1,0 +1,13 @@
+<a href="{{ .RelPermalink }}">
+    <article class="article">
+        <img
+            src="{{ absURL .Params.Image }}"
+            alt="{{ .Title }}"
+        />
+        <footer>
+            <h3>{{ .Title }}</h3>
+            {{ $date := time.AsTime .Params.Date }}
+            <p>{{ $date.Format "January 2006" }}</p>
+        </footer>
+    </article>
+</a>

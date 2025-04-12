@@ -1,0 +1,12 @@
+<header>
+    <a href="{{ absLangURL "" }}"><img id="logo" width="80px" height="80px"  src="{{ absURL "logo.webp" }}" alt="Logo"></a>
+    <div>
+        <a href="{{ absLangURL "" }}"><h1 id="title">{{ T "title" }}</h1></a>
+        <p id="subtitle">{{ T "location" }}</p>
+    </div>
+    <address>
+        <a target="_blank" rel="noopener" href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        <a target="_blank" rel="noopener" href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a>
+        <a target="_blank" rel="noopener" href="{{ .Site.Params.linkedin }}">LinkedIn</a>
+    </address>
+</header>

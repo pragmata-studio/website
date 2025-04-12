@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h2> {{ .Title }} </h2>
+{{ range .RegularPages  }}
+{{ partial "partials/project.html" . }}
+{{ end }}
+{{ end }}

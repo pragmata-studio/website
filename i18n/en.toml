@@ -1,0 +1,13 @@
+title = 'Pragmata Studio'
+subtitle = 'Pragmata Studio is a forward-thinking software development company that specializes in creating innovative, custom solutions tailored to meet the unique needs of businesses across various industries.'
+location = 'Albuquerque, NM'
+
+aboutUs = 'About Us'
+services = 'Services'
+projects = 'Projects'
+articles = 'Articles'
+technologies = 'Technologies'
+
+notFoundTitle = 'Not Found'
+notFoundDescription = 'The page you requested cannot be found.'
+notFoundLink = 'Return to the home page.'

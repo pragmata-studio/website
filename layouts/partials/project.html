@@ -1,0 +1,31 @@
+<article class="project">
+    <header>
+        <img
+            width="40"
+            height="40"
+            src="{{ absURL .Params.Image }}"
+            alt="{{ .Title }}"
+        />
+        <div>
+            <h3>{{ .Title }}</h3>
+            {{ $startDate := time.AsTime .Params.StartDate }}
+            {{ $endDate := time.Now }}
+            {{ if .Params.EndDate }}
+                {{ $endDate = time.AsTime .Params.EndDate }}
+            {{ end }}
+            <p>{{ $startDate.Format "January 2006" }} - {{ $endDate.Format "January 2006" }} • {{ .Params.Location }}</p>
+        </div>
+    </header>
+    <main>
+        <p>
+           {{ .Description }}
+        </p>
+    </main>
+    <footer>
+        <ul>
+            {{ range (sort .Params.Tags) }}
+            <li class="tag">{{ . }}</li>
+            {{ end }}
+        </ul>
+    </footer>
+</article>

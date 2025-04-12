@@ -1,0 +1,19 @@
+baseURL = 'https://pragmata.studio'
+defaultContentLanguage = 'en'
+enableRobotsTXT = true
+
+[params]
+email = 'info@pragmata.studio'
+phone = '+1 (505) 234-5392'
+linkedin = 'https://www.linkedin.com/company/pragmata-studio'
+
+[languages]
+[languages.en]
+languageName = 'English'
+languageCode = 'en'
+weight = 1
+
+[outputs]
+home = ['html']
+page = ['html']
+section = ['html']

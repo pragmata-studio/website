@@ -1,0 +1,47 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="manifest" href="{{ absURL "site.webmanifest" }}" />
+    <meta name="apple-mobile-web-app-title" content="{{ T "title" }}">
+
+    <!-- Style -->
+    <link rel="icon" type="image/png" href="{{ absURL "favicon-48x48.png" }}" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="{{ absURL "favicon.svg" }}" />
+    <link rel="shortcut icon" href="{{ absURL "favicon.ico" }}" />
+    <link rel="prefetch" href="{{ absURL "styles.css" }}" />
+    <link rel="stylesheet" href="{{ absURL "styles.css" }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ absURL "apple-touch-icon.png" }}" />
+
+    <!-- Main -->
+    <title>{{ T "title" }}</title>
+    <meta name="title" content="{{ T "title" }}" />
+    <meta name="description" content="{{ T "subtitle" }}" />
+    <link rel="canonical" href="{{ absURL .RelPermalink }}" />
+    {{ range $.AllTranslations }}
+    <link href="{{ absURL .RelPermalink }}" rel="alternate" hreflang="{{ .Language.LanguageCode }}">
+    {{ end }}
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ absURL .RelPermalink }}" />
+    {{ if .Params.Image }}
+    <meta property="og:image" content="{{ absURL .Params.Image }}" />
+    {{ else }}
+    <meta property="og:image" content="{{ absURL "logo.jpg" }}" />
+    {{ end }}
+    <meta property="og:title" content="{{ T "title" }}" />
+    <meta property="og:description" content="{{ T "subtitle" }}" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="{{ T "title" }}" />
+    <meta name="twitter:description" content="{{ T "subtitle" }}" />
+    {{ if .Params.Image }}
+    <meta property="twitter:image" content="{{ absURL .Params.Image }}" />
+    {{ else }}
+    <meta property="twitter:image" content="{{ absURL "logo.jpg" }}" />
+    {{ end }}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="{{ absURL .RelPermalink }}" />
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>

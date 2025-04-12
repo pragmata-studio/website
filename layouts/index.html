@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section id="about-us">
+    <h2>{{ T "aboutUs" }}</h2>
+    <p>{{ T "subtitle" }}</p>
+</section>
+
+<section id="services">
+    <h2>{{ T "services" }}</h2>
+    <ul>
+        {{ range $index, $tag := $.Site.Taxonomies.categories }}
+        <li class="tag">{{ $tag.Page.Title }}</li>
+        {{ end }}
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>{{ T "projects" }}</h2>
+    {{ range (where .Site.RegularPages "Section" "projects") }}
+    {{ partial "partials/project.html" . }}
+    {{ end }}
+</section>
+
+<section id="articles">
+    <h2>{{ T "articles" }}</h2>
+    {{ range (where .Site.RegularPages "Section" "articles") }}
+    {{ partial "partials/article.html" . }}
+    {{ end }}
+</section>
+
+<section id="technologies">
+    <h2>{{ T "technologies" }}</h2>
+    <ul>
+        {{ range $index, $tag := $.Site.Taxonomies.tags }}
+        <li class="tag">{{ $tag.Page.Title }}</li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
