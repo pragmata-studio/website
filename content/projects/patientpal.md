@@ -1,6 +1,6 @@
 +++
 title = 'PatientPal'
-weight = 5
+weight = 600
 startDate = 2019-08-01
 endDate = 2019-12-01
 location = 'Boston, MA'

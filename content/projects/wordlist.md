@@ -1,6 +1,6 @@
 +++
 title = 'WordList'
-weight = 4
+weight = 500
 startDate = 2019-12-01
 endDate = 2022-04-01
 location = 'Madrid, ES'

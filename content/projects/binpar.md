@@ -1,6 +1,6 @@
 +++
 title = 'BinPar Digital Ignition'
-weight = 6
+weight = 700
 startDate = 2018-01-01
 endDate = 2019-08-01
 location = 'Madrid, ES'
