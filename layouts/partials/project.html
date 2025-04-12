@@ -7,7 +7,13 @@
             alt="{{ .Title }}"
         />
         <div>
-            <h3>{{ .Title }}</h3>
+            {{ if .Params.ProjectUrl }}
+            <a href="{{ .Params.ProjectUrl }}" target="_blank" rel="noopener">
+                <h3>{{ .Title }}</h3>
+            </a>
+            {{ else }}
+                <h3>{{ .Title }}</h3>
+            {{ end }}
             {{ $startDate := time.AsTime .Params.StartDate }}
             {{ $endDate := time.Now }}
             {{ if .Params.EndDate }}

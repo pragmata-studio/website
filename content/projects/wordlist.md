@@ -1,5 +1,6 @@
 +++
 title = 'WordList'
+projectUrl = 'https://wordlist.com'
 weight = 500
 startDate = 2019-12-01
 endDate = 2022-04-01

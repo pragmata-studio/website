@@ -1,5 +1,6 @@
 +++
 title = 'Namastay'
+projectUrl = 'https://namastay.io'
 weight = 200
 startDate = 2022-04-01
 location = 'Paris, FR'

@@ -1,5 +1,6 @@
 +++
 title = 'BinPar Digital Ignition'
+projectUrl = 'https://binpar.com'
 weight = 700
 startDate = 2018-01-01
 endDate = 2019-08-01

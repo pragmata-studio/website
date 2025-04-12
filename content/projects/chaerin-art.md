@@ -1,8 +1,9 @@
 +++
 title = 'Chaerin Art'
+projectUrl = 'https://chaerin.art'
 weight = 100
 startDate = 2025-03-01
-endDate = 2025-03-02
+endDate = 2025-03-01
 location = 'Seoul, KR'
 description = 'Developed a static site using Hugo, Decap CMS, Git, GitHub, and Cloudflare for a renowned artist in South Korea.'
 image = "/img/chaerin-art.webp"
