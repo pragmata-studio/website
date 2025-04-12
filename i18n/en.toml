@@ -9,6 +9,7 @@ projects = 'Projects'
 articles = 'Articles'
 technologies = 'Technologies'
 
+present = 'Present'
 notFoundTitle = 'Not Found'
 notFoundDescription = 'The page you requested cannot be found.'
 notFoundLink = 'Return to the home page.'

@@ -15,11 +15,13 @@
                 <h3>{{ .Title }}</h3>
             {{ end }}
             {{ $startDate := time.AsTime .Params.StartDate }}
-            {{ $endDate := time.Now }}
+            {{ $startDate := $startDate.Format "January 2006" }}
+            {{ $endDate := T "present" }}
             {{ if .Params.EndDate }}
                 {{ $endDate = time.AsTime .Params.EndDate }}
+                {{ $endDate = $endDate.Format "January 2006" }}
             {{ end }}
-            <p>{{ $startDate.Format "January 2006" }} - {{ $endDate.Format "January 2006" }} • {{ .Params.Location }}</p>
+            <p>{{ $startDate }} - {{ $endDate }} • {{ .Params.Location }}</p>
         </div>
     </header>
     <main>
