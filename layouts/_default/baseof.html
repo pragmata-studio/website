@@ -6,6 +6,7 @@
             {{ partial "header.html" . }}
             <main>{{ block "main" . }}{{ end }}</main>
             {{ partial "footer.html" . }}
+            <a id="cta" target="_blank" rel="noopener" href="mailto:{{ .Site.Params.email }}?subject=We%20are%20interested%20in%20your%20services">{{ T "contactUs" }}</a>
         </div>
     </body>
 </html>

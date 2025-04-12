@@ -8,7 +8,7 @@
     <h2>{{ T "services" }}</h2>
     <ul>
         {{ range $index, $tag := $.Site.Taxonomies.categories }}
-        <li class="tag">{{ $tag.Page.Title }}</li>
+        <a href="{{ $tag.Page.RelPermalink }}"><li class="tag">{{ $tag.Page.Title }}</li></a>
         {{ end }}
     </ul>
 </section>
@@ -31,7 +31,7 @@
     <h2>{{ T "technologies" }}</h2>
     <ul>
         {{ range $index, $tag := $.Site.Taxonomies.tags }}
-        <li class="tag">{{ $tag.Page.Title }}</li>
+        <a href="{{ $tag.Page.RelPermalink }}"><li class="tag">{{ $tag.Page.Title }}</li></a>
         {{ end }}
     </ul>
 </section>

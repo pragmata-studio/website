@@ -1,3 +1,29 @@
+:root {
+    --background: #f5f5f5;
+    --container-background: #ffffff;
+    --color: #333;
+    --link-color: #555;
+    --subtitle-color: #888;
+    --header-color: #f9f9f9;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #111;
+        --container-background: #222;
+        --color: #eee;
+        --link-color: #ddd;
+        --subtitle-color: #aaa;
+        --header-color: #000;
+        --border-color: #444;
+        --shadow-color: rgba(255, 255, 255, 0.1);
+        --accent-color: #fff;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,16 +33,17 @@
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--background);
+    color: var(--color);
     padding: 20px;
     line-height: 1.6;
 }
 
 #container {
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+    position: relative;
+    box-shadow: 0 0 16px var(--shadow-color);
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--container-background);
     max-width: 800px;
     margin: 0 auto;
     padding: 40px;
@@ -47,7 +74,7 @@ address {
 }
 
 a {
-    color: #555;
+    color: var(--link-color);
 }
 
 a:has(h1) {
@@ -58,11 +85,10 @@ h1 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 0px;
-    color: #333;
 }
 
 p {
-    color: #555;
+    color: var(--link-color);
 }
 
 section {
@@ -82,14 +108,18 @@ ul {
     gap: 8px;
 }
 
+ol {
+    list-style-position: inside;
+}
+
 li {
-    color: #555;
+    color: var(--link-color);
 }
 
 h3 {
     font-size: 16px;
     font-weight: 500;
-    color: #555;
+    color: var(--link-color);
 }
 
 img {
@@ -97,9 +127,20 @@ img {
     max-width: 100%;
 }
 
+
+.tag {
+    background-color: var(--background);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    align-items: center;
+    gap: 8px;
+    color: var(--link-color);
+}
+
 .project {
     margin-bottom: 20px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -107,8 +148,8 @@ img {
 .project > header {
     display: flex;
     padding: 16px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #eee;
+    background-color: var(--header-color);
+    border-bottom: 1px solid var(--border-color);
     margin: 0;
 }
 
@@ -118,7 +159,7 @@ img {
 }
 
 .project > header > div > p {
-    color: #888;
+    color: var(--subtitle-color);
 }
 
 .project > main {
@@ -135,7 +176,7 @@ img {
 
 .article {
     margin-bottom: 20px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
 }
@@ -148,12 +189,12 @@ img {
 .article > footer {
     margin-top: 0;
     padding: 16px;
-    background: #f9f9f9;
-    border-top: 1px solid #eee;
+    background: var(--header-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .article > footer > p {
-    color: #888;
+    color: var(--subtitle-color);
 }
 
 footer {
@@ -161,17 +202,33 @@ footer {
     font-size: 12px;
 }
 
-.tag {
-    background-color: #f5f5f5;
-    padding: 4px 12px;
+#cta {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    color: var(--border-color);
+    background-color: var(--accent-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 12px 24px;
     border-radius: 4px;
-    font-size: 12px;
-    align-items: center;
-    gap: 8px;
-    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+#cta:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+}
+
+#cta:active {
+    transform: translateY(0px);
 }
 
 @media (max-width: 640px) {
+    body {
+        padding: 12px;
+    }
+
     header {
         flex-direction: column;
     }

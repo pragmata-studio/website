@@ -17,3 +17,4 @@ weight = 1
 home = ['html']
 page = ['html']
 section = ['html']
+taxonomy = []
