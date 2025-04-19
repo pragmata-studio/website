@@ -27,7 +27,7 @@
     {{ if .Params.Image }}
     <meta property="og:image" content="{{ absURL .Params.Image }}" />
     {{ else }}
-    <meta property="og:image" content="{{ absURL "logo.jpg" }}" />
+    <meta property="og:image" content="{{ absURL "banner.webp" }}" />
     {{ end }}
     <meta property="og:title" content="{{ T "title" }}" />
     <meta property="og:description" content="{{ T "subtitle" }}" />
@@ -38,7 +38,7 @@
     {{ if .Params.Image }}
     <meta property="twitter:image" content="{{ absURL .Params.Image }}" />
     {{ else }}
-    <meta property="twitter:image" content="{{ absURL "logo.jpg" }}" />
+    <meta property="twitter:image" content="{{ absURL "banner.webp" }}" />
     {{ end }}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="{{ absURL .RelPermalink }}" />
