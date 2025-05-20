@@ -5,7 +5,10 @@ enableRobotsTXT = true
 [params]
 email = 'info@pragmata.studio'
 phone = '+1 (505) 234-5392'
-linkedin = 'https://www.linkedin.com/company/pragmata-studio'
+linkedIn = 'https://www.linkedin.com/company/pragmata-studio'
+twitter = 'pragmatastudio'
+ein = '365122076'
+foundingDate = '2024-10-01'
 
 [languages]
 [languages.en]
@@ -14,7 +17,7 @@ languageCode = 'en'
 weight = 1
 
 [outputs]
-home = ['html']
-page = ['html']
-section = ['html']
+home = ['html', 'rss']
+page = ['html', 'rss']
+section = ['html', 'rss']
 taxonomy = []

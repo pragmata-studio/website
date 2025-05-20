@@ -16,14 +16,14 @@
 <section id="projects">
     <h2>{{ T "projects" }}</h2>
     {{ range (where .Site.RegularPages "Section" "projects") }}
-    {{ partial "partials/project.html" . }}
+    {{ partial "project.html" . }}
     {{ end }}
 </section>
 
 <section id="articles">
     <h2>{{ T "articles" }}</h2>
     {{ range (where .Site.RegularPages "Section" "articles") }}
-    {{ partial "partials/article.html" . }}
+    {{ partial "article.html" . }}
     {{ end }}
 </section>
 

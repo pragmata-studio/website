@@ -5,9 +5,7 @@
     <meta name="apple-mobile-web-app-title" content="{{ T "title" }}">
 
     <!-- Style -->
-    <link rel="icon" type="image/png" href="{{ absURL "favicon-48x48.png" }}" sizes="48x48" />
-    <link rel="icon" type="image/svg+xml" href="{{ absURL "favicon.svg" }}" />
-    <link rel="shortcut icon" href="{{ absURL "favicon.ico" }}" />
+    <link rel="icon" href="{{ absURL "favicon.ico" }}" />
     <link rel="prefetch" href="{{ absURL "styles.css" }}" />
     <link rel="stylesheet" href="{{ absURL "styles.css" }}" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ absURL "apple-touch-icon.png" }}" />
@@ -21,6 +19,44 @@
     <link href="{{ absURL .RelPermalink }}" rel="alternate" hreflang="{{ .Language.LanguageCode }}">
     {{ end }}
 
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": {{ .Site.Params.phone }},
+        "email": "{{ .Site.Params.email }}"
+      },
+      "description": "{{ T "subtitle" }}",
+      "email": "{{ .Site.Params.email }}",
+      "foundingDate": "{{ .Site.Params.foundingDate }}",
+      "iso6523Code": "0199:{{ .Site.Params.ein }}",
+      "legalName": "{{ T "title" }}",
+      "logo": {{ absURL "logo.webp" }},
+      "name": "{{ T "title" }}",
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 1
+      },
+      "sameAs": ["{{ .Site.Params.linkedIn }}"],
+      "telephone": {{ .Site.Params.phone }},
+      "url": {{ absURL .RelPermalink }}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "{{ T "title" }}",
+      "url" : {{ absURL .RelPermalink }}
+    }
+  </script>
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" href="{{ absURL "index.xml" }}" />
+
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ absURL .RelPermalink }}" />
@@ -33,6 +69,8 @@
     <meta property="og:description" content="{{ T "subtitle" }}" />
 
     <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
     <meta name="twitter:title" content="{{ T "title" }}" />
     <meta name="twitter:description" content="{{ T "subtitle" }}" />
     {{ if .Params.Image }}
@@ -40,6 +78,4 @@
     {{ else }}
     <meta property="twitter:image" content="{{ absURL "banner.webp" }}" />
     {{ end }}
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="{{ absURL .RelPermalink }}" />
 </head>
