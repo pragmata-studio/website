@@ -1,6 +1,6 @@
 +++
 title = 'NDA Engineering Project'
-weight = 300
+weight = 100
 startDate = 2019-01-01
 location = 'New York, NY'
 description = 'Advised big corporation with over $2.5B valuation on finding product market fit. Helped a leading technology framework with over $15M in funding develop strategy. Built full stack and mobile application, with compilers, tools, databases, and infrastructure. Lead Machine Learning and AI proofs of concept.'

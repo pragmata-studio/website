@@ -1,7 +1,7 @@
 +++
 title = 'Chaerin Art'
 projectUrl = 'https://chaerin.art'
-weight = 100
+weight = 300
 startDate = 2025-03-01
 endDate = 2025-03-01
 location = 'Seoul, KR'
