@@ -3,6 +3,7 @@ title = 'Namastay'
 projectUrl = 'https://namastay.io'
 weight = 200
 startDate = 2022-04-01
+endDate = 2025-12-19
 location = 'Paris, FR'
 description = 'Leading and mentoring an entire engineering company from the ground up. Handling multiple payment services and methods such as Apple Pay and Stripe. Building a booking engine generating over $100M booking value.'
 image = "/img/namastay.webp"
